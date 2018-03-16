@@ -1,0 +1,74 @@
+{
+  "name": "prismic-react-router",
+  "version": "0.0.2",
+  "private": false,
+  "description": "Small wrappers to simplify use of the Prismic API",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Scout-NU/prismic-react-router"
+  },
+  "maintainers": [
+    {
+      "name": "Adam Markon",
+      "email": "amarkon895@gmail.com",
+      "twitter": "amarkon88"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/Scout-NU/prismic-react-router/issues/new"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "jsnext:main": "dist/es/index.js",
+  "scripts": {
+    "build:umd": "npm run clean:umd && cross-env NODE_ENV=production webpack --mode production --module-bind js=babel-loader --output='dist/umd/prismic-react-router.js'",
+    "build:cjs": "npm run clean:cjs && cross-env NODE_ENV=commonjs babel src --out-dir dist/cjs",
+    "build:esm": "npm run clean:esm && cross-env NODE_ENV=es babel src --out-dir dist/esm",
+    "build": "npm run build:esm && npm run build:cjs && npm run build:umd",
+    "clean:umd": "rimraf dist/umd",
+    "clean:cjs": "rimraf dist/cjs",
+    "clean:esm": "rimraf dist/esm",
+    "clean": "rimraf dist",
+    "prepublish": "npm run build",
+    "precommit": "lint-staged",
+    "lint": "eslint *.js"
+  },
+  "dependencies": {
+    "whatwg-fetch": "~2.0.3"
+  },
+  "peerDependencies": {
+    "prismic-javascript": "^1.4.1",
+    "react-router-dom": "~4.2.2",
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "@nuscout/eslint-config": "^0.2.0",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "cross-env": "^5.1.4",
+    "eslint": "^4.16.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "parcel-bundler": "^1.6.2",
+    "prettier": "^1.10.2",
+    "prismic-javascript": "^1.4.1",
+    "react": "^16.2.0",
+    "react-router-dom": "~4.2.2",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "files": [
+    "dist"
+  ],
+  "lint-staged": {
+    "*.{js,json,css,scss,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
