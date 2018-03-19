@@ -15,6 +15,12 @@
       "twitter": "amarkon88"
     }
   ],
+  "keywords": [
+    "prismic",
+    "react",
+    "router",
+    "react-router"
+  ],
   "bugs": {
     "url": "https://github.com/Scout-NU/prismic-react-router/issues/new"
   },
