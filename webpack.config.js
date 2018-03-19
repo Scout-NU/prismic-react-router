@@ -1,7 +1,7 @@
 module.exports = {
   output: {
     libraryTarget: 'umd',
-    library: 'PrismicReactStarter',
+    library: 'PrismicReactRouter',
   },
   externals: {
     react: 'react',

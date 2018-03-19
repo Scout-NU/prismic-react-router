@@ -59,7 +59,11 @@ import { PrismicPage } from 'prismic-react-router';
 If you're not using a bundler and would like a UMD build, no worries! We've got that too:
 
 ```html
-<script src="https://unpkg.com/prismic-react-router@latest/dist/umd/prismic-react-router.js">
+<script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
+<script src="https://unpkg.com/prismic-javascript"></script>
+<script src="https://unpkg.com/prismic-react-router@latest/dist/umd/prismic-react-router.js"></script>
 <script>
   var PrismicPage = window.PrismicReactRouter;
 </script>
