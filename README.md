@@ -65,7 +65,7 @@ If you're not using a bundler and would like a UMD build, no worries! We've got 
 <script src="https://unpkg.com/prismic-javascript"></script>
 <script src="https://unpkg.com/prismic-react-router@latest/dist/umd/prismic-react-router.js"></script>
 <script>
-  var PrismicPage = window.PrismicReactRouter;
+  var PrismicPage = window.PrismicReactRouter.PrismicPage;
 </script>
 ```
 
