@@ -17,6 +17,54 @@ This repository serves as a boilerplate project to get started with a client-sid
 
 When Scout started its first Prismic project, we found the resources around a React implementation to be quite scarce. As a result, we created several wrappers and utilities to make working with Prismic a bit more pleasant.
 
+## Usage
+
+We highly recommend using a package manager and a bundler with this library. First, install the module:
+
+```bash
+# NPM 5+
+npm i react react-dom react-router-dom prismic-javascript prismic-react-router
+
+# NPM < 5
+npm i --save react react-dom react-router-dom prismic-javascript prismic-react-router
+
+# Yarn
+yarn add react react-dom react-router-dom prismic-javascript prismic-react-router
+```
+
+Then, import based on your stack:
+
+#### CommonJS
+
+```js
+// import the entire package
+const PrismicReactRouter = require('prismic-react-router');
+
+// just a single module
+const PrismicPage = require('prismic-react-router').PrismicPage;
+```
+
+#### ES Modules
+
+```js
+// import the entire package
+import * as PrismicReactRouter from 'prismic-react-router';
+
+// just a single module
+import { PrismicPage } from 'prismic-react-router';
+```
+
+#### UMD
+
+If you're not using a bundler and would like a UMD build, no worries! We've got that too:
+
+```html
+<script src="https://unpkg.com/prismic-react-router@latest/dist/umd/prismic-react-router.js">
+<script>
+  var PrismicPage = window.PrismicReactRouter;
+</script>
+```
+
 ## API
 
 ### `PrismicPage(Page: React.Component, Loading: React.Component?, NotFound: React.Component?)`
@@ -128,7 +176,7 @@ All Scout libraries are [ISC-licensed](/LICENSE). tl;dr: you can use this code h
 
 ## About Scout
 
-<p  align="center">
+<p align="center">
   <img src="https://web.northeastern.edu/scout/wp-content/themes/scout/images/logo.png" alt="Scout Logo" />
 </p>
 
