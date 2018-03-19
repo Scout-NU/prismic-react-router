@@ -1,6 +1,6 @@
 {
   "name": "prismic-react-router",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "description": "Small wrappers to simplify use of the Prismic API",
   "license": "ISC",
